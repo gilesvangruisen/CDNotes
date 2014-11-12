@@ -15,14 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     // Core Data
-    var managedObjectContext: NSManagedObjectContext!
+    var _managedObjectContext: NSManagedObjectContext!
     var persistentStoreCoordinator: NSPersistentStoreCoordinator!
     var managedObjectModel: NSManagedObjectModel!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Set up some core data
-        buildCoreData()
-
         return true
     }
 
@@ -50,12 +48,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // MARK: Core Data Stack
 
+    func managedObjectContext() -> NSManagedObjectContext {
+        if _managedObjectContext == nil {
+            buildCoreData()
+        }
+
+        return _managedObjectContext
+    }
+
     func buildCoreData() {
         managedObjectModel = NSManagedObjectModel(contentsOfURL: NSBundle.mainBundle().URLForResource("ObjectModel", withExtension: "momd")!)
         persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
 
-        managedObjectContext = NSManagedObjectContext()
-        managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
+        _managedObjectContext = NSManagedObjectContext()
+        _managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
 
         let documentsDirectory: NSURL? = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as? NSURL
         let sqlitePath = documentsDirectory?.URLByAppendingPathComponent("ObjectStorage.sqlite")

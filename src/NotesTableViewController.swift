@@ -10,16 +10,17 @@ import UIKit
 
 class NotesTableViewController: UITableViewController {
 
-    let notes = ["what what what what what", "blah blah blah blah blah", "opooo opooo opooo opooo", "bleep bleep bleep bleep", "bleooop bleooop bleooop bleooop", "dude dude dude dude", "yo yo yo", "dawg dawg dawg", "baap baap baap baap", "tweedd tweedd tweedd tweedd"]
+    var notes: [Note]
+
+    required init(coder aDecoder: NSCoder) {
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        notes = Note.fetchNotes(appDelegate.managedObjectContext()) as [Note]
+
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,22 +39,27 @@ class NotesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Note", forIndexPath: indexPath) as UITableViewCell
 
-        // Configure the cell...
-        cell.textLabel.text = notes[indexPath.row]
-        cell.detailTextLabel?.text = "time"
+        let note = notes[indexPath.row]
+
+        println(note)
+
+        cell.textLabel.text = note.text
+        cell.detailTextLabel?.text = note.time.description
 
         return cell
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let cell = sender as UITableViewCell
-        let indexPath = tableView.indexPathForCell(cell)
+    func refresh() {
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        notes = Note.fetchNotes(appDelegate.managedObjectContext()) as [Note]
 
-        var noteViewController = segue.destinationViewController as NoteViewController
-        if let row = indexPath?.row {
-            noteViewController.note = notes[row]
+        tableView.reloadData()
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let newNoteViewController = segue.destinationViewController as? NewNoteViewController {
+            newNoteViewController.notesViewController = self
         }
-        
     }
 
     /*
