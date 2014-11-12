@@ -31,7 +31,14 @@ class NoteViewModel: NSObject {
         self.init()
         self.note = note
 
-        title = note.text.substringToIndex(advance(note.text.startIndex, 12))
+        let stringLength = (note.text as NSString).length
+        let maxTitleLength = 30
+
+        title = note.text.substringToIndex(advance(note.text.startIndex, min(maxTitleLength, stringLength)))
+        if stringLength > maxTitleLength {
+            title = "\(title!)…"
+        }
+
         timeAgo = note.time.timeAgo()
         timeAgoShort = note.time.timeAgoSimple()
         rawText = note.text

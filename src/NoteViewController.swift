@@ -24,7 +24,7 @@ class NoteViewController: UIViewController {
 
         noteViewModel.publink.subscribe { (object: AnyObject?) -> () in
             if let newNoteViewModel = object as? NoteViewModel {
-                self.title = newNoteViewModel.title
+                self.title = newNoteViewModel.title!
                 self.textView.attributedText = newNoteViewModel.attributedText
             }
         }        

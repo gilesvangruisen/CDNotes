@@ -45,8 +45,8 @@ class NotesTableViewController: UITableViewController {
 
         func updateNoteViewModel(object: AnyObject?) -> () {
             if let newNoteViewModel = object as? NoteViewModel {
-                cell.textLabel.text = newNoteViewModel.rawText
-                cell.detailTextLabel?.text = newNoteViewModel.timeAgo
+                cell.textLabel.text = newNoteViewModel.title
+                cell.detailTextLabel?.text = newNoteViewModel.timeAgoShort
             }
         }
 

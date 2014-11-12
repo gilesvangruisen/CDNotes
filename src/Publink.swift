@@ -23,7 +23,6 @@ class Publink: NSObject {
     }
 
     func publish(object: AnyObject?) {
-        println(object)
         last = object
         for subscription in subscriptions {
             subscription(object)
