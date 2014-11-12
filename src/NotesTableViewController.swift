@@ -10,11 +10,11 @@ import UIKit
 
 class NotesTableViewController: UITableViewController {
 
-    var notes: [Note]
+    var noteViewModels: [NoteViewModel]
 
     required init(coder aDecoder: NSCoder) {
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        notes = Note.fetchNotes(appDelegate.managedObjectContext()) as [Note]
+        noteViewModels = Note.fetchNotes(appDelegate.managedObjectContext())!
 
         super.init(coder: aDecoder)
     }
@@ -35,25 +35,35 @@ class NotesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return notes.count
+        return noteViewModels.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Note", forIndexPath: indexPath) as UITableViewCell
 
-        let note = notes[indexPath.row]
+        let noteViewModel = noteViewModels[indexPath.row]
 
-        cell.textLabel.text = note.text
-        cell.detailTextLabel?.text = note.time.description
+        func updateNoteViewModel(object: AnyObject?) -> () {
+            if let newNoteViewModel = object as? NoteViewModel {
+                cell.textLabel.text = newNoteViewModel.rawText
+                cell.detailTextLabel?.text = newNoteViewModel.timeAgo
+            }
+        }
+
+        updateNoteViewModel(noteViewModel)
+        noteViewModel.publink.subscribe(updateNoteViewModel)
 
         return cell
     }
 
     func refresh() {
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        notes = Note.fetchNotes(appDelegate.managedObjectContext()) as [Note]
-
+        refetch()
         tableView.reloadData()
+    }
+
+    func refetch() {
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        noteViewModels = Note.fetchNotes(appDelegate.managedObjectContext())!
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -61,7 +71,7 @@ class NotesTableViewController: UITableViewController {
             newNoteViewController.notesViewController = self
         } else if let noteViewController = segue.destinationViewController as? NoteViewController {
             let indexPath = tableView.indexPathForCell(sender as UITableViewCell)!
-            noteViewController.note = notes[indexPath.row]
+            noteViewController.noteViewModel = noteViewModels[indexPath.row]
         }
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		175FE582C0EED1DB179F8A6F /* libPods-CDNotes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 041B61C03D70829F3EDA201A /* libPods-CDNotes.a */; };
 		50D47C301A12A2AE001CF665 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D47C2F1A12A2AE001CF665 /* CoreData.framework */; };
 		50E931621A12E37100DA99D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E931571A12E37100DA99D6 /* AppDelegate.swift */; };
 		50E931641A12E37100DA99D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E9315A1A12E37100DA99D6 /* Main.storyboard */; };
@@ -17,9 +18,12 @@
 		50E931691A12E37100DA99D6 /* ObjectModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50E931601A12E37100DA99D6 /* ObjectModel.xcdatamodeld */; };
 		50E931721A12EEFC00DA99D6 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E931711A12EEFC00DA99D6 /* NewNoteViewController.swift */; };
 		50E931741A12F5ED00DA99D6 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E931731A12F5ED00DA99D6 /* Note.swift */; };
+		50E931761A1321FD00DA99D6 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E931751A1321FD00DA99D6 /* NoteViewModel.swift */; };
+		50E931781A13235000DA99D6 /* Publink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E931771A13235000DA99D6 /* Publink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041B61C03D70829F3EDA201A /* libPods-CDNotes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CDNotes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50A532E51A107DBC00CA9A40 /* CDNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D47C2F1A12A2AE001CF665 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		50E931571A12E37100DA99D6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +35,11 @@
 		50E931611A12E37100DA99D6 /* ObjectModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ObjectModel.xcdatamodel; sourceTree = "<group>"; };
 		50E931711A12EEFC00DA99D6 /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewNoteViewController.swift; path = models/NewNoteViewController.swift; sourceTree = "<group>"; };
 		50E931731A12F5ED00DA99D6 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Note.swift; path = models/Note.swift; sourceTree = "<group>"; };
+		50E931751A1321FD00DA99D6 /* NoteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteViewModel.swift; path = "view models/NoteViewModel.swift"; sourceTree = "<group>"; };
+		50E931771A13235000DA99D6 /* Publink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Publink.swift; sourceTree = "<group>"; };
+		50E931791A13303300DA99D6 /* CDNotes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CDNotes-Bridging-Header.h"; sourceTree = "<group>"; };
+		7B282451631489D10A17BA05 /* Pods-CDNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDNotes/Pods-CDNotes.release.xcconfig"; sourceTree = "<group>"; };
+		8F80BB75DE5E1610FA2DA090 /* Pods-CDNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDNotes/Pods-CDNotes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,12 +48,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				50D47C301A12A2AE001CF665 /* CoreData.framework in Frameworks */,
+				175FE582C0EED1DB179F8A6F /* libPods-CDNotes.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14CD807144947709D26B0913 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F80BB75DE5E1610FA2DA090 /* Pods-CDNotes.debug.xcconfig */,
+				7B282451631489D10A17BA05 /* Pods-CDNotes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		50A532DC1A107DBC00CA9A40 = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +71,7 @@
 				50E9316B1A12E3AD00DA99D6 /* Supporting Files */,
 				50E9316A1A12E37B00DA99D6 /* Frameworks */,
 				50A532E61A107DBC00CA9A40 /* Products */,
+				14CD807144947709D26B0913 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +91,8 @@
 				50E9315F1A12E37100DA99D6 /* NoteViewController.swift */,
 				50E931711A12EEFC00DA99D6 /* NewNoteViewController.swift */,
 				50E931731A12F5ED00DA99D6 /* Note.swift */,
+				50E931751A1321FD00DA99D6 /* NoteViewModel.swift */,
+				50E931771A13235000DA99D6 /* Publink.swift */,
 				50E931701A12E4A400DA99D6 /* Data */,
 				50E9316D1A12E3CC00DA99D6 /* Views */,
 				50E9316C1A12E3C500DA99D6 /* Storyboards */,
@@ -82,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				50D47C2F1A12A2AE001CF665 /* CoreData.framework */,
+				041B61C03D70829F3EDA201A /* libPods-CDNotes.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -89,6 +112,7 @@
 		50E9316B1A12E3AD00DA99D6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				50E931791A13303300DA99D6 /* CDNotes-Bridging-Header.h */,
 				50E9315C1A12E37100DA99D6 /* Images.xcassets */,
 				50E9315D1A12E37100DA99D6 /* Info.plist */,
 			);
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50A533041A107DBC00CA9A40 /* Build configuration list for PBXNativeTarget "CDNotes" */;
 			buildPhases = (
+				F499A1858B6F5E5D0DE40D61 /* Check Pods Manifest.lock */,
 				50A532E11A107DBC00CA9A40 /* Sources */,
 				50A532E21A107DBC00CA9A40 /* Frameworks */,
 				50A532E31A107DBC00CA9A40 /* Resources */,
+				48053564448A507E40CE056E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -184,15 +210,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		48053564448A507E40CE056E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CDNotes/Pods-CDNotes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F499A1858B6F5E5D0DE40D61 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		50A532E11A107DBC00CA9A40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50E931761A1321FD00DA99D6 /* NoteViewModel.swift in Sources */,
 				50E931691A12E37100DA99D6 /* ObjectModel.xcdatamodeld in Sources */,
 				50E931621A12E37100DA99D6 /* AppDelegate.swift in Sources */,
 				50E931681A12E37100DA99D6 /* NoteViewController.swift in Sources */,
 				50E931671A12E37100DA99D6 /* NotesTableViewController.swift in Sources */,
+				50E931781A13235000DA99D6 /* Publink.swift in Sources */,
 				50E931721A12EEFC00DA99D6 /* NewNoteViewController.swift in Sources */,
 				50E931741A12F5ED00DA99D6 /* Note.swift in Sources */,
 			);
@@ -291,23 +352,30 @@
 		};
 		50A533051A107DBC00CA9A40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F80BB75DE5E1610FA2DA090 /* Pods-CDNotes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = src/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "src/CDNotes-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		50A533061A107DBC00CA9A40 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B282451631489D10A17BA05 /* Pods-CDNotes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = src/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "src/CDNotes-Bridging-Header.h";
 			};
 			name = Release;
 		};
