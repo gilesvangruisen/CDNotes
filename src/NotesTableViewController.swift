@@ -59,6 +59,9 @@ class NotesTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let newNoteViewController = segue.destinationViewController as? NewNoteViewController {
             newNoteViewController.notesViewController = self
+        } else if let noteViewController = segue.destinationViewController as? NoteViewController {
+            let indexPath = tableView.indexPathForCell(sender as UITableViewCell)!
+            noteViewController.note = notes[indexPath.row]
         }
     }
 

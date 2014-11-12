@@ -47,7 +47,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes" id="HuP-gH-62U">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FW0-Z9-Awg">
-                            <color key="tintColor" red="0.74206852912902832" green="0.0" blue="0.031974576413631439" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.70396608114242554" green="0.0" blue="0.014696826227009296" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="gQJ-I9-nse" kind="presentation" id="DXo-YW-Obg"/>
                             </connections>
@@ -93,6 +93,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.69886666536331177" green="0.0" blue="0.014505752362310886" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -107,6 +108,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.69886666536331177" green="0.0" blue="0.014505752362310886" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -161,6 +163,7 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.69376224279403687" green="0.0" blue="0.014315605163574219" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kRw-Kq-FNi" firstAttribute="top" secondItem="n96-JZ-HFM" secondAttribute="bottom" id="iDJ-dg-caU"/>
                             <constraint firstItem="n96-JZ-HFM" firstAttribute="top" secondItem="oCZ-3B-ltd" secondAttribute="bottom" id="usY-2S-54c"/>

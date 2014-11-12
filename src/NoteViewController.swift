@@ -10,19 +10,18 @@ import UIKit
 
 class NoteViewController: UIViewController {
 
+    @IBOutlet var textView: UITextView!
+    var note: Note!
+
     required init(coder aDecoder: NSCoder) {
-        note = ""
         super.init(coder: aDecoder)
     }
-
-    @IBOutlet var textView: UITextView!
-    var note: String
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.textView.text = note
-        self.title = note
+        self.textView.text = note.text
+        self.title = note.text
         // Do any additional setup after loading the view.
     }
 

@@ -24,10 +24,13 @@ class Note: NSManagedObject {
 
     class func fetchNotes(managedObjectContext: NSManagedObjectContext!) -> [AnyObject]? {
         let entityDescription = NSEntityDescription.entityForName(entityName(), inManagedObjectContext: managedObjectContext)
-        var request = managedObjectContext.persistentStoreCoordinator?.managedObjectModel.fetchRequestTemplateForName("Notes")
+        let requestTemplate = managedObjectContext.persistentStoreCoordinator?.managedObjectModel.fetchRequestTemplateForName("Notes")!
+        var request: NSFetchRequest = requestTemplate?.copy() as NSFetchRequest
+
+        request.sortDescriptors = [NSSortDescriptor(key: "time", ascending: false)]
 
         var error: NSError?
-        let notes = managedObjectContext.executeFetchRequest(request!, error: &error)
+        let notes = managedObjectContext.executeFetchRequest(request, error: &error)
 
         if let error = error {
             println("Fetch error: \(error)")
