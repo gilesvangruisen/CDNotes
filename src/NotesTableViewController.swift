@@ -21,6 +21,8 @@ class NotesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,8 +42,6 @@ class NotesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Note", forIndexPath: indexPath) as UITableViewCell
 
         let note = notes[indexPath.row]
-
-        println(note)
 
         cell.textLabel.text = note.text
         cell.detailTextLabel?.text = note.time.description

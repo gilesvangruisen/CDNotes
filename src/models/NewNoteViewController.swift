@@ -14,7 +14,7 @@ class NewNoteViewController: UIViewController {
     @IBOutlet var textView: UITextView!
 
     @IBAction func cancel(sender: UIButton) {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss()
     }
 
     @IBAction func saveNote(sender: UIButton) {
@@ -44,13 +44,19 @@ class NewNoteViewController: UIViewController {
 
         } else {
             notesViewController.refresh()
-            dismissViewControllerAnimated(true, completion: nil)
+            dismiss()
         }
+    }
+
+    func dismiss() {
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.Default, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

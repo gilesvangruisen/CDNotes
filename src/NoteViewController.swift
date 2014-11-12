@@ -20,9 +20,10 @@ class NoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+
         self.textView.text = note.text
         self.title = note.text
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

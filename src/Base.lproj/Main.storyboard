@@ -47,7 +47,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Notes" id="HuP-gH-62U">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="FW0-Z9-Awg">
-                            <color key="tintColor" red="0.70396608114242554" green="0.0" blue="0.014696826227009296" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="gQJ-I9-nse" kind="presentation" id="DXo-YW-Obg"/>
                             </connections>
@@ -71,11 +70,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PB9-nl-eHm">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6f-wL-CsO">
                                 <rect key="frame" x="98" y="31" width="124" height="21"/>
                                 <constraints>
@@ -143,7 +137,7 @@
             </objects>
             <point key="canvasLocation" x="435" y="-167"/>
         </scene>
-        <!--Note View Controller-->
+        <!--Title-->
         <scene sceneID="OO1-kF-IKN">
             <objects>
                 <viewController id="OTz-s1-Hcl" customClass="NoteViewController" customModule="CDNotes" customModuleProvider="target" sceneMemberID="viewController">
@@ -163,7 +157,7 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="0.69376224279403687" green="0.0" blue="0.014315605163574219" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="kRw-Kq-FNi" firstAttribute="top" secondItem="n96-JZ-HFM" secondAttribute="bottom" id="iDJ-dg-caU"/>
                             <constraint firstItem="n96-JZ-HFM" firstAttribute="top" secondItem="oCZ-3B-ltd" secondAttribute="bottom" id="usY-2S-54c"/>
@@ -171,6 +165,9 @@
                             <constraint firstItem="n96-JZ-HFM" firstAttribute="leading" secondItem="t25-16-XAV" secondAttribute="leading" id="xD6-K1-ZE1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="7qg-nL-oU1">
+                        <barButtonItem key="backBarButtonItem" title="Notes" id="C69-xR-6qK"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="textView" destination="n96-JZ-HFM" id="JBb-hz-O9l"/>
@@ -184,10 +181,16 @@
         <scene sceneID="SjT-hS-wXo">
             <objects>
                 <navigationController id="Knr-jr-oGv" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vlZ-sP-XLN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.69886666536331177" green="0.0" blue="0.014505752362310886" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="gtn-gg-prg" kind="relationship" relationship="rootViewController" id="vWE-hf-sUK"/>
