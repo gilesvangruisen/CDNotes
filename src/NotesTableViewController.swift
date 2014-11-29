@@ -39,19 +39,11 @@ class NotesTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Note", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Note", forIndexPath: indexPath) as NoteCell
 
         let noteViewModel = noteViewModels[indexPath.row]
 
-        func updateNoteViewModel(object: AnyObject?) -> () {
-            if let newNoteViewModel = object as? NoteViewModel {
-                cell.textLabel.text = newNoteViewModel.title
-                cell.detailTextLabel?.text = newNoteViewModel.timeAgoShort
-            }
-        }
-
-        updateNoteViewModel(noteViewModel)
-        noteViewModel.publink.subscribe(updateNoteViewModel)
+        cell.noteViewModel = noteViewModel
 
         return cell
     }

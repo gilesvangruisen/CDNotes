@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		175FE582C0EED1DB179F8A6F /* libPods-CDNotes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 041B61C03D70829F3EDA201A /* libPods-CDNotes.a */; };
+		500AC16C1A296A94009BD736 /* Publink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AC16B1A296A94009BD736 /* Publink.swift */; };
+		50A141871A142A2A00231E95 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A141861A142A2A00231E95 /* NoteCell.swift */; };
 		50D47C301A12A2AE001CF665 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D47C2F1A12A2AE001CF665 /* CoreData.framework */; };
 		50E931621A12E37100DA99D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E931571A12E37100DA99D6 /* AppDelegate.swift */; };
 		50E931641A12E37100DA99D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E9315A1A12E37100DA99D6 /* Main.storyboard */; };
 		50E931651A12E37100DA99D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50E9315C1A12E37100DA99D6 /* Images.xcassets */; };
-		50E931661A12E37100DA99D6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50E9315D1A12E37100DA99D6 /* Info.plist */; };
 		50E931671A12E37100DA99D6 /* NotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9315E1A12E37100DA99D6 /* NotesTableViewController.swift */; };
 		50E931681A12E37100DA99D6 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E9315F1A12E37100DA99D6 /* NoteViewController.swift */; };
 		50E931691A12E37100DA99D6 /* ObjectModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50E931601A12E37100DA99D6 /* ObjectModel.xcdatamodeld */; };
 		50E931721A12EEFC00DA99D6 /* NewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E931711A12EEFC00DA99D6 /* NewNoteViewController.swift */; };
 		50E931741A12F5ED00DA99D6 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E931731A12F5ED00DA99D6 /* Note.swift */; };
 		50E931761A1321FD00DA99D6 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E931751A1321FD00DA99D6 /* NoteViewModel.swift */; };
-		50E931781A13235000DA99D6 /* Publink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E931771A13235000DA99D6 /* Publink.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		041B61C03D70829F3EDA201A /* libPods-CDNotes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CDNotes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		500AC16B1A296A94009BD736 /* Publink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Publink.swift; path = Publinks/src/Publink.swift; sourceTree = "<group>"; };
+		50A141861A142A2A00231E95 /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		50A532E51A107DBC00CA9A40 /* CDNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D47C2F1A12A2AE001CF665 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		50E931571A12E37100DA99D6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +38,6 @@
 		50E931711A12EEFC00DA99D6 /* NewNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewNoteViewController.swift; path = models/NewNoteViewController.swift; sourceTree = "<group>"; };
 		50E931731A12F5ED00DA99D6 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Note.swift; path = models/Note.swift; sourceTree = "<group>"; };
 		50E931751A1321FD00DA99D6 /* NoteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteViewModel.swift; path = "view models/NoteViewModel.swift"; sourceTree = "<group>"; };
-		50E931771A13235000DA99D6 /* Publink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Publink.swift; sourceTree = "<group>"; };
 		50E931791A13303300DA99D6 /* CDNotes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CDNotes-Bridging-Header.h"; sourceTree = "<group>"; };
 		7B282451631489D10A17BA05 /* Pods-CDNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDNotes/Pods-CDNotes.release.xcconfig"; sourceTree = "<group>"; };
 		8F80BB75DE5E1610FA2DA090 /* Pods-CDNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDNotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDNotes/Pods-CDNotes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +65,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		500AC16D1A296A98009BD736 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				500AC16B1A296A94009BD736 /* Publink.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		50A532DC1A107DBC00CA9A40 = {
 			isa = PBXGroup;
 			children = (
@@ -89,10 +98,11 @@
 				50E931571A12E37100DA99D6 /* AppDelegate.swift */,
 				50E9315E1A12E37100DA99D6 /* NotesTableViewController.swift */,
 				50E9315F1A12E37100DA99D6 /* NoteViewController.swift */,
+				50A141861A142A2A00231E95 /* NoteCell.swift */,
 				50E931711A12EEFC00DA99D6 /* NewNoteViewController.swift */,
 				50E931731A12F5ED00DA99D6 /* Note.swift */,
 				50E931751A1321FD00DA99D6 /* NoteViewModel.swift */,
-				50E931771A13235000DA99D6 /* Publink.swift */,
+				500AC16D1A296A98009BD736 /* Helpers */,
 				50E931701A12E4A400DA99D6 /* Data */,
 				50E9316D1A12E3CC00DA99D6 /* Views */,
 				50E9316C1A12E3C500DA99D6 /* Storyboards */,
@@ -202,7 +212,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50E931661A12E37100DA99D6 /* Info.plist in Resources */,
 				50E931651A12E37100DA99D6 /* Images.xcassets in Resources */,
 				50E931641A12E37100DA99D6 /* Main.storyboard in Resources */,
 			);
@@ -253,7 +262,8 @@
 				50E931621A12E37100DA99D6 /* AppDelegate.swift in Sources */,
 				50E931681A12E37100DA99D6 /* NoteViewController.swift in Sources */,
 				50E931671A12E37100DA99D6 /* NotesTableViewController.swift in Sources */,
-				50E931781A13235000DA99D6 /* Publink.swift in Sources */,
+				500AC16C1A296A94009BD736 /* Publink.swift in Sources */,
+				50A141871A142A2A00231E95 /* NoteCell.swift in Sources */,
 				50E931721A12EEFC00DA99D6 /* NewNoteViewController.swift in Sources */,
 				50E931741A12F5ED00DA99D6 /* Note.swift in Sources */,
 			);
@@ -358,6 +368,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = src/Info.plist;
+				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "src/CDNotes-Bridging-Header.h";
@@ -373,6 +384,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = src/Info.plist;
+				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "src/CDNotes-Bridging-Header.h";

@@ -11,6 +11,7 @@ import UIKit
 class NoteViewController: UIViewController {
 
     @IBOutlet var textView: UITextView!
+
     var noteViewModel: NoteViewModel!
 
     required init(coder aDecoder: NSCoder) {
@@ -20,14 +21,14 @@ class NoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
-
         noteViewModel.publink.subscribe { (object: AnyObject?) -> () in
             if let newNoteViewModel = object as? NoteViewModel {
                 self.title = newNoteViewModel.title!
                 self.textView.attributedText = newNoteViewModel.attributedText
             }
-        }        
+        }
+        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
