@@ -23,7 +23,6 @@ class NoteCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        println("POOOPawake")
         // Initialization code
     }
 
